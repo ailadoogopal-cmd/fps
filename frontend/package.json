@@ -1,0 +1,17 @@
+{
+  "name": "kisanlakshmi-frontend",
+  "version": "1.0.0",
+  "description": "KisanLakshmi - Where Farmers Meet Buyers Directly",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server . -p 3000",
+    "build": "echo 'No build step required for static HTML site'",
+    "lint": "echo 'No linter configured yet'"
+  },
+  "keywords": ["kisanlakshmi", "farmers", "marketplace"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@vercel/analytics": "^1.3.1"
+  }
+}
