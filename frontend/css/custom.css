@@ -1,0 +1,155 @@
+/* KrishiSetu Custom Agricultural & Modern UI Theme */
+:root {
+    --primary-green: #15803d;
+    --primary-dark: #14532d;
+    --primary-light: #dcfce7;
+    --amber-gold: #d97706;
+    --amber-light: #fef3c7;
+    --earth-brown: #78350f;
+    --bg-slate: #f8fafc;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Glassmorphic Cards & Headers */
+.glass-header {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    border-color: #86efac;
+}
+
+/* Custom Badges */
+.badge-grade-a {
+    background-color: #dcfce7;
+    color: #15803d;
+    border: 1px solid #86efac;
+}
+
+.badge-grade-b {
+    background-color: #fef9c3;
+    color: #854d0e;
+    border: 1px solid #fde047;
+}
+
+.badge-grade-c {
+    background-color: #ffedd5;
+    color: #9a3412;
+    border: 1px solid #fdba74;
+}
+
+/* Ticker Animation */
+.ticker-wrap {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.ticker-move {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 40s linear infinite;
+}
+
+.ticker-move:hover {
+    animation-play-state: paused;
+}
+
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+
+/* Pulse animation for live auction */
+.pulse-live {
+    animation: livePulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes livePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+/* Modal Transitions */
+.modal-overlay {
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(4px);
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Tab active indicators */
+.nav-tab-active {
+    color: #15803d !important;
+    border-bottom: 2px solid #16a34a !important;
+    font-weight: 600 !important;
+}
+
+/* Stepper Bar */
+.step-completed {
+    background-color: #16a34a;
+    color: white;
+}
+.step-active {
+    background-color: #d97706;
+    color: white;
+    box-shadow: 0 0 0 3px rgba(217, 119, 6, 0.2);
+}
+.step-pending {
+    background-color: #e2e8f0;
+    color: #64748b;
+}
+
+/* 2G Low-Data Ultra Fast Rural Mode */
+body.low-data-mode {
+    background-color: #f8fafc !important;
+}
+body.low-data-mode .bg-gradient-to-r,
+body.low-data-mode .bg-gradient-to-br {
+    background-image: none !important;
+    background-color: #1e293b !important;
+}
+body.low-data-mode .glass-header,
+body.low-data-mode .glass-card {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: #ffffff !important;
+}
+body.low-data-mode img.opacity-20,
+body.low-data-mode img.scale-110 {
+    display: none !important;
+}
+body.low-data-mode * {
+    animation: none !important;
+    transition: none !important;
+}
